@@ -17,6 +17,10 @@
   <link href="css/animate.css" rel="stylesheet" >
   <script src="dist/wow.min.js"></script><!--wow-->
   <script>new WOW().init();</script>
+<!-- Loads <model-viewer> for modern browsers: -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
 
 <body>
@@ -126,7 +130,7 @@ About
   <div class="container-fluid about">
   <div class="row text-center">
   	<a href="#"  class="card col-xs-12 col-md-6 wow fadeIn" data-wow-delay="0.1s">
-      <img class="card-img" src="img/company.jpg" alt="air">
+      <model-viewer preload poster="img/woodstool.png" src="img/woodstool.gltf" ios-src="img/woodstool.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
       <div class="card-img-overlay d-flex flex-column justify-content-center">
   		 <h3>会社概要</h3>
       </div>
